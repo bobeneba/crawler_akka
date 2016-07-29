@@ -31,7 +31,18 @@ libraryDependencies ++= Seq(
 "com.typesafe.akka" %% "akka-http-spray-json-experimental" % "2.4.8",
 "com.typesafe.akka" %% "akka-http-xml-experimental" % "2.4.8",
 "com.typesafe.akka" %% "akka-persistence-query-experimental" % "2.4.8"
-
-
-
 )
+libraryDependencies += "org.avaje.ebeanorm" % "avaje-ebeanorm" % "7.20.1"
+libraryDependencies += "mysql" % "mysql-connector-java" % "5.1.35"
+val crawler_akka = (project in file(".")).enablePlugins(PhantomJs)
+
+libraryDependencies ++= Seq(
+  "org.specs2" %% "specs2-core" % "2.4.15" % "test",
+  "com.github.detro.ghostdriver" % "phantomjsdriver" % "1.1.0"
+)
+
+javaOptions ++= PhantomJs.setup(baseDirectory.value)
+// https://mvnrepository.com/artifact/com.github.klieber/phantomjs-maven-core
+libraryDependencies += "com.github.klieber" % "phantomjs-maven-core" % "0.7"
+
+

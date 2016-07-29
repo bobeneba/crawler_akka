@@ -18,6 +18,7 @@ object CrawlerProperties {
      try {
        val input = new FileInputStream("crawler_akka.properties");
        properties.load(input)
+       input.close()
      } catch {
        case t: Throwable => t.printStackTrace() // TODO: handle error
      }

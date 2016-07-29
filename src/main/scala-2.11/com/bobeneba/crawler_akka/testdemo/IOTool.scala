@@ -17,6 +17,9 @@ trait IOTool {
   * @Description: from dir:/crawler_akka/ read  crawler_akka.properties file
   */ 
   def fileload:Unit = {
+    
+      
+      
 //    val properties = new Properties()
 //    val path = pro
 //    val path = FileOperator.getClass.getClassLoader.getResourceAsStream("crawler_akka.properties")

@@ -1,10 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <ivy-module version="2.0" xmlns:e="http://ant.apache.org/ivy/extra">
-	<info organisation="default"
+	<info organisation="crawler_akka"
 		module="crawler_akka_2.11"
 		revision="0.0.1-SNAPSHOT"
 		status="integration"
-		publication="20160726111841"
+		publication="20160728234721"
 	>
 		<description>
 		crawler_akka
@@ -60,5 +60,10 @@
 		<dependency org="com.typesafe.akka" name="akka-http-spray-json-experimental_2.11" rev="2.4.8" conf="compile->default(compile)"/>
 		<dependency org="com.typesafe.akka" name="akka-http-xml-experimental_2.11" rev="2.4.8" conf="compile->default(compile)"/>
 		<dependency org="com.typesafe.akka" name="akka-persistence-query-experimental_2.11" rev="2.4.8" conf="compile->default(compile)"/>
+		<dependency org="org.avaje.ebeanorm" name="avaje-ebeanorm" rev="7.20.1" conf="compile->default(compile)"/>
+		<dependency org="mysql" name="mysql-connector-java" rev="5.1.35" conf="compile->default(compile)"/>
+		<dependency org="org.specs2" name="specs2-core_2.11" rev="2.4.15" conf="test->default(compile)"/>
+		<dependency org="com.github.detro.ghostdriver" name="phantomjsdriver" rev="1.1.0" conf="compile->default(compile)"/>
+		<dependency org="com.github.klieber" name="phantomjs-maven-core" rev="0.7" conf="compile->default(compile)"/>
 	</dependencies>
 </ivy-module>
