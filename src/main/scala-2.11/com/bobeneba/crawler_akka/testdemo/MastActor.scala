@@ -34,8 +34,7 @@ object MastActor extends App with IOTool  with EbeanServerProvider{
   val secondActor =system.actorOf(Props[MyActor],"myactor1")
   val pro =CrawlerProperties loadProperties()
   println(pro.toString())
-  myActor ! "test"
-  secondActor !"test"
+ 
 
 
 
