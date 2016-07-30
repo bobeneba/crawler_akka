@@ -21,7 +21,7 @@ trait IOTool {
       
       
 //    val properties = new Properties()
-//    val path = pro
+// 
 //    val path = FileOperator.getClass.getClassLoader.getResourceAsStream("crawler_akka.properties")
 //    properties.load(new FileInputStream(path))
 //    println(properties.getProperty("ddd"))//读取键为ddd的数据的值
