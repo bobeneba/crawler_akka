@@ -1,5 +1,12 @@
 package com.bobeneba.crawler_akka.testdemo
-
+/**  
+* @Title: file_name
+* @Package package_name
+* @Description: master node actor 
+* @author bobeneba dengtao139796@gmail.com
+* @date 2016年8月1日 下午4:31:20
+* @version V1.0  
+*/ 
 import com.avaje.ebean.Ebean
 import com.avaje.ebean.EbeanServerFactory
 import com.avaje.ebean.config.ServerConfig

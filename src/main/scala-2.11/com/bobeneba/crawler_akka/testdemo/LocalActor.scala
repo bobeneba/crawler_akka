@@ -1,5 +1,12 @@
 package com.bobeneba.crawler_akka.testdemo
-
+/**  
+* @Title: file_name
+* @Package package_name
+* @Description: slave node actor 
+* @author bobeneba dengtao139796@gmail.com
+* @date 2016年8月1日 下午4:30:37
+* @version V1.0  
+*/ 
 import java.io.File
 
 import akka.actor.{ Props, Actor, ActorSystem }
@@ -8,6 +15,7 @@ import akka.event.Logging
 import java.net.URL
 
 import com.bobeneba.crawler_akka.conf.RemoteActorConf
+import com.bobeneba.crawler_akka.properties.CrawlerProperties
 /**
  * Local actor which listens on any free port
  */
@@ -24,7 +32,10 @@ class LocalActor extends Actor {
       user : The actor is user defined
       remote : name of the actor, passed as parameter to system.actorOf call
      */
-    val remoteActor = context.actorSelection("akka.tcp://RemoteSystem@192.168.11.13:5150/user/remote")
+    val properties = CrawlerProperties.loadProperties()
+    val master_ip = properties.getProperty("master_ip")
+    println("a"+master_ip)
+    val remoteActor = context.actorSelection("akka.tcp://RemoteSystem@"+master_ip+":5150/user/remote")
     log.info("That 's remote:" + remoteActor)
     remoteActor ! "大苹果 ， 你好啊， 我是邓涛的mac 小苹果"
   }
