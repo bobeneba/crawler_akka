@@ -30,7 +30,7 @@ class RemoteActor extends Actor {
 
 object RemoteActor {
   def main(args: Array[String]) {
-    val config = RemoteActorConf getSlaveConfig
+    val config = RemoteActorConf getMasterConfig
     val system = ActorSystem("RemoteSystem" , config)
     //create a remote actor from actorSystem
     val remote = system.actorOf(Props[RemoteActor], name="remote")
