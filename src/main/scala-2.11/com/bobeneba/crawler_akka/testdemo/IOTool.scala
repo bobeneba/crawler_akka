@@ -22,11 +22,7 @@ trait IOTool {
       
 //    val properties = new Properties()
 // 
-<<<<<<< HEAD
-//    val path = FileOperator.getClass.getClassLoader.getResourceAsStream("crawler_akka.properties")
-=======
-//    val path = getClass.getClassLoader.getResourceAsStream("crawler_akka.properties")
->>>>>>> 0605b1aa23ba6533a31ae03ff279197f88b859ec
+
 //    properties.load(new FileInputStream(path))
 //    println(properties.getProperty("ddd"))//读取键为ddd的数据的值
 //    println(properties.getProperty("ddd","没有值"))//如果ddd不存在,则返回第二个参数
