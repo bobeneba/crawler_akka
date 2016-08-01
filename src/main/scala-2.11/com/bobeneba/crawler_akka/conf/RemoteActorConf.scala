@@ -13,7 +13,7 @@ object RemoteActorConf {
   val Logger = LoggerFactory.getLogger("RemoteBase.class");
   def getMasterConfig = {
     val class_path = getClass.getClassLoader.getResource("").toString()
-    val conf_path = class_path.substring(0, class_path.indexOf("/target")) + "/remote_application.conf"
+    val conf_path = class_path.substring(0, class_path.indexOf("/target")) + "/master_application.conf"
     val url = new URL(conf_path)
     val configFile = url.getFile
     //parse the config
@@ -23,7 +23,7 @@ object RemoteActorConf {
   }
   def getSlaveConfig = {
     val class_path = getClass.getClassLoader.getResource("").toString()
-    val conf_path = class_path.substring(0, class_path.indexOf("/target")) + "/local_application.conf"
+    val conf_path = class_path.substring(0, class_path.indexOf("/target")) + "/slave_application.conf"
     val url = new URL(conf_path)
     val configFile = url.getFile
     //parse the config
